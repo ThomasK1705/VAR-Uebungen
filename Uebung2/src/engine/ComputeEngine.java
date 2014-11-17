@@ -23,10 +23,11 @@ public class ComputeEngine implements Compute{
 		}
 		try {
 			String name = "Compute";
+			//System.setProperty("java.security.policy","file:///C:/Users/thomaskaemmerling/Dropbox/HS Mannheim/VAR/VAR-Uebungen/Uebung2/policy.txt");
 			Compute engine = new ComputeEngine();
 			Compute stub = (Compute) UnicastRemoteObject.exportObject(engine, 0);
 			Registry registry = LocateRegistry.getRegistry();
-			registry.rebind(name, stub);
+			registry.rebind(name, engine);
 			System.out.println("ComputeEngine bound");
 		} catch (Exception e) {
 			System.err.println("ComputeEngine exception:");

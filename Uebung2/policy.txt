@@ -1,0 +1,3 @@
+grant codeBase "file:C:\Users\thomaskaemmerling\Dropbox\HS Mannheim\VAR\VAR-Uebungen\Uebung2/src/" {
+    permission java.security.AllPermission;
+};
